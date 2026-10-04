@@ -216,3 +216,40 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Full local research archive: publish selected copies under publication/.
+/data/
+/checkpoints/
+/figures/
+/results/
+/logs/
+/archive/
+/tmp/
+
+# Meeting rehearsal, course planning and private learning notes remain local.
+/docs/*
+!/docs/public/
+
+# Cite third-party papers without redistributing PDFs or extracted figures.
+/literature/*
+!/literature/README.md
+!/literature/references.bib
+!/literature/methods_candidates.bib
+
+# Downloaded bundles, training output and cluster-local runtime records.
+*.pt
+*.pth
+*.npz
+*.tar.gz
+*.zip
+slurm-*.out
+slurm-*.err
+*_jobids.txt
+continuation_jobids.txt
+
+# Local credentials and editor/environment state.
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/

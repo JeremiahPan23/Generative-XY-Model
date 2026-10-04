@@ -1,0 +1,7 @@
+# Use the group's CUDA-compatible PyTorch installation; do not replace it blindly.
+torch>=2.2
+numpy>=1.24
+numba>=0.59
+scipy>=1.10
+matplotlib>=3.7
+tqdm>=4.60

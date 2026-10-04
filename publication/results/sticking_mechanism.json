@@ -1,0 +1,140 @@
+{
+  "config": {
+    "L": 4,
+    "beta": 1.12,
+    "J": 1.0,
+    "horizon": 1.0,
+    "train_steps": 32,
+    "hidden": 32,
+    "drift_bound": 12.0,
+    "sigma_min": 0.2,
+    "sigma_max": 2.0,
+    "updates": 5000,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "seed": 22,
+    "checkpoint_every": 250
+  },
+  "steps": 32,
+  "chain": 5,
+  "entry_retained_draw": 3978,
+  "first_rejection_retained_draw": 3979,
+  "last_rejection_retained_draw": 16384,
+  "recorded_consecutive_rejections": 12406,
+  "terminal_stay_censored": true,
+  "retained_draws": 16384,
+  "retained_fraction_in_rejection_streak": 0.7572021484375,
+  "whole_group_acceptance": 0.16498565673828125,
+  "current_state": {
+    "log_weight": 52.55422674608597,
+    "energy_per_bond": -0.6299175370107464,
+    "minus_beta_H": 22.576244526465153,
+    "inferred_log_Qb_minus_log_Qf": 29.97798221962082,
+    "vortex_pairs": 0.0
+  },
+  "first_rejected_candidate": {
+    "label": "first_rejected",
+    "retained_draw": 3979,
+    "energy_per_bond": -0.7959854426697974,
+    "log_weight": 37.3304796358217,
+    "minus_beta_H": 28.528118265285542,
+    "inferred_log_Qb_minus_log_Qf": 8.802361370536161,
+    "delta_log_weight": -15.22374711026427,
+    "acceptance_probability": 2.4457419689984355e-07,
+    "recorded_uniform": 0.9448305551445537,
+    "accepted": false
+  },
+  "rejected_examples": [
+    {
+      "label": "first_rejected",
+      "retained_draw": 3979,
+      "energy_per_bond": -0.7959854426697974,
+      "log_weight": 37.3304796358217,
+      "minus_beta_H": 28.528118265285542,
+      "inferred_log_Qb_minus_log_Qf": 8.802361370536161,
+      "delta_log_weight": -15.22374711026427,
+      "acceptance_probability": 2.4457419689984355e-07,
+      "recorded_uniform": 0.9448305551445537,
+      "accepted": false
+    },
+    {
+      "label": "lowest_energy",
+      "retained_draw": 11313,
+      "energy_per_bond": -0.9525211835139376,
+      "log_weight": 40.27121354124353,
+      "minus_beta_H": 34.138359217139524,
+      "inferred_log_Qb_minus_log_Qf": 6.132854324104009,
+      "delta_log_weight": -12.28301320484244,
+      "acceptance_probability": 4.629724453859332e-06,
+      "recorded_uniform": 0.19854326456574747,
+      "accepted": false
+    },
+    {
+      "label": "largest_weight",
+      "retained_draw": 6625,
+      "energy_per_bond": -0.6743662422093945,
+      "log_weight": 48.07424319628706,
+      "minus_beta_H": 24.1692861207847,
+      "inferred_log_Qb_minus_log_Qf": 23.904957075502356,
+      "delta_log_weight": -4.479983549798916,
+      "acceptance_probability": 0.011333599593126222,
+      "recorded_uniform": 0.8475575828559591,
+      "accepted": false
+    }
+  ],
+  "candidates_with_lower_energy": 9520,
+  "candidates_with_at_least_current_weight": 0,
+  "proposal_log_weight_quantiles": {
+    "min": 32.14965783629436,
+    "q05": 37.680514018088545,
+    "median": 41.136742680996576,
+    "q95": 44.1265223927757,
+    "max": 48.07424319628706
+  },
+  "other_chain_proposal_count": 143367,
+  "estimated_next_acceptance": 6.0953676196514524e-05,
+  "estimated_next_acceptance_by_other_chain": [
+    5.930717719059067e-05,
+    6.273816542458636e-05,
+    6.342083331343045e-05,
+    5.81775130467239e-05,
+    5.888178337975178e-05,
+    6.235478581859912e-05,
+    6.179547520191939e-05
+  ],
+  "estimated_mean_attempts_until_acceptance": 16405.90137297055,
+  "estimated_probability_at_least_observed_rejections": 0.46944020180149354,
+  "checks": {
+    "prior_audit_passed": true,
+    "proposal_archive_hash_matches_summary": true,
+    "source_hash:src/sps_xy.py": true,
+    "source_hash:src/sps_diagnostics.py": true,
+    "source_hash:scripts/sps_experiment.py": true,
+    "entry_was_accepted": true,
+    "entry_endpoint_matches_proposal": true,
+    "entry_weight_matches_proposal": true,
+    "record_count_matches_stay": true,
+    "all_rejection_flags": true,
+    "endpoint_exactly_unchanged": true,
+    "old_path_weight_exactly_unchanged": true,
+    "probabilities_match_saved_alpha": true,
+    "every_recorded_random_test_rejects": true,
+    "energy_matches_independent_bond_loop": true,
+    "independent_selected_chain_MH_replay": true
+  },
+  "all_checks_pass": true,
+  "source_files": {
+    "results/sps_a/L4_seed22_replica_26634/eval_long/steps_32.npz": "78cc608177ec54ba765faf65a1012cca3342e15999133fc568ddfa3accec5969",
+    "results/sps_a/L4_seed22_replica_26634/eval_long/summary.json": "58add499aa5317560283d516fe3494bf9cdeaf11256e70c7d7a123bcce4c6a17",
+    "results/sps_a/L4_seed22_replica_26634/analysis/audit.json": "f2fd845c02d1fd0eeeb6258dace4d12fe5c780252536d1e746e50ee4af879a01",
+    "scripts/explain_sps_sticking.py": "8be613c7fef80abe97ad4a1ded73adfe46a15676a445d01ae42c662d3e8ba071"
+  },
+  "limitations": [
+    "Case selected after observing the worst retained stay; not a preselected statistical test.",
+    "Run ended during the stay: 12406 is the observed rejection count, not a completed waiting time.",
+    "Log Qb - log Qf is algebraically inferred; intermediate paths were not saved, so their densities are not independently recomputed.",
+    "Held-out-chain estimates use a finite proposal bank; rare unseen weights may affect probability and waiting-time estimates.",
+    "Observed MH mechanism does not establish why training produced this tail, or prove all chains equilibrated.",
+    "Zero vortices refers only to the saved endpoint, not to its unrecorded path."
+  ]
+}

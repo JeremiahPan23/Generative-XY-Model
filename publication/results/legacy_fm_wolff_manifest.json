@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-09-22T16:06:30.002277+00:00",
+  "config": {
+    "L": 32,
+    "J": 1.0,
+    "beta": 1.12,
+    "fm_samples": 128,
+    "fm_steps": 50,
+    "fm_batch_size": 8,
+    "fm_seed": 20260923,
+    "wolff_chains": 4,
+    "wolff_samples_per_chain": 256,
+    "wolff_burn_in": 2000,
+    "wolff_interval": 50,
+    "wolff_seed": 20261000,
+    "ci_block_size": 16,
+    "bootstrap_seed": 20262000,
+    "bootstrap_draws": 4000
+  },
+  "sources": {
+    "checkpoints/best_dit_flow.pth": "0ad5d12999d9beca95a73b62d037f93213955d6ed80eab6ba405be4656afa0ea",
+    "scripts/compare_fm_wolff.py": "0319a9f6b7a6a4d6bdc0881f4da18797f510618307d762fdd8298f2f7755ec94",
+    "src/model_dit.py": "cd8d7917ea798d9af5461ed996e83aa652f5d30b7b781492dbbaaa46f0d8831d",
+    "src/sampler_wolff.py": "aa939108a5595a4a963974ecad03d1bd98589baecfec728bde8906db5501fe92",
+    "src/xy_observables.py": "37969eef23eb05d25330ef47c0064f0e030a2e64fedc206da988e49e20ebd779",
+    "src/train_flow.py": "1463a48eb7210f2445649af3109dfa713809ced623484a10a81e22ae759770cc",
+    "data/xy_L32_T0_5_N1000.pt": "a191be4327d857dacb84ee14538aa7fb7651fa0444168a70439464568af5df2b",
+    "data/xy_L32_T0_7_N1000.pt": "7ff0f6a3312e7985073407bff0c6c66571c846c09c752ea5dee6328dfeb2ec7e",
+    "data/xy_L32_T0_8_N1000.pt": "9ec270ca0ba66f302f036ad24b85e948985b69c43398dcd60abc85f730933d7a",
+    "data/xy_L32_T0_89_N1000.pt": "2f02002c87d7c19fd7d39999b100d707991aabdd4623c2f5fbe989f7175435a8",
+    "data/xy_L32_T1_N1000.pt": "9c15fabfa95b7d8b78733dd47e2cecc504d21515ac7697206bf0362eee48393c",
+    "data/xy_L32_T1_2_N1000.pt": "d6fcc39071ce719d85ad619183dd192a06848c023703675265465123449d0e46",
+    "data/xy_L32_T1_5_N1000.pt": "1b28d5e2ebe2fceb112eaf60f4d9ccbff910d42f9fc33ed9dbf9b19e0e1544ea"
+  },
+  "runtime": {
+    "python": "3.10.21",
+    "numpy": "2.2.6",
+    "torch": "2.15.0.dev20260916+cu132",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "elapsed_seconds": 11.45645830000285
+  },
+  "reference_initial_states": [
+    "ordered",
+    "random",
+    "ordered",
+    "random"
+  ],
+  "reference_chain_seeds": [
+    20261000,
+    20261001,
+    20261002,
+    20261003
+  ],
+  "temperature_provenance": "beta=1.12 from original sampler source; old training tensor/checkpoint lacks embedded temperature metadata.",
+  "reproducibility": "Saved initial noise and endpoints are authoritative. Floating-point results may differ across hardware or PyTorch versions.",
+  "artifacts": {
+    "samples.npz": "dc1a8b8d32fb28e1a82090b0032a376055bb72ab0eaae88c0090b3c8c1134a12",
+    "summary.json": "8a79eec872bc4270edae09b173e986437499093fb2ec92b3450e96d86c75db6e",
+    "observables.csv": "f8f5b78d6dc41d25cbfb7f07d4b0e23c066898d533cb7cfbdccbf7bf12f14906"
+  }
+}

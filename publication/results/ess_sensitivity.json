@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "seed": 11,
+      "steps": 32,
+      "sum_chain_ess_per_second": 141.710998151969,
+      "equal_variance_pooled_mean_ess_per_second": 131.45076972208852,
+      "screening_pass": true
+    },
+    {
+      "seed": 11,
+      "steps": 64,
+      "sum_chain_ess_per_second": 86.97736639885886,
+      "equal_variance_pooled_mean_ess_per_second": 38.07779966143876,
+      "screening_pass": false
+    },
+    {
+      "seed": 11,
+      "steps": 128,
+      "sum_chain_ess_per_second": 66.78227472258996,
+      "equal_variance_pooled_mean_ess_per_second": 26.621966310910842,
+      "screening_pass": true
+    },
+    {
+      "seed": 22,
+      "steps": 32,
+      "sum_chain_ess_per_second": 72.54539986102853,
+      "equal_variance_pooled_mean_ess_per_second": 10.740969220478497,
+      "screening_pass": false
+    },
+    {
+      "seed": 22,
+      "steps": 64,
+      "sum_chain_ess_per_second": 103.42917633687438,
+      "equal_variance_pooled_mean_ess_per_second": 98.73876967738555,
+      "screening_pass": true
+    },
+    {
+      "seed": 22,
+      "steps": 128,
+      "sum_chain_ess_per_second": 67.59347657351223,
+      "equal_variance_pooled_mean_ess_per_second": 57.62224204231038,
+      "screening_pass": true
+    },
+    {
+      "seed": 33,
+      "steps": 32,
+      "sum_chain_ess_per_second": 148.64055760358588,
+      "equal_variance_pooled_mean_ess_per_second": 140.29115916757155,
+      "screening_pass": true
+    },
+    {
+      "seed": 33,
+      "steps": 64,
+      "sum_chain_ess_per_second": 147.04685537397933,
+      "equal_variance_pooled_mean_ess_per_second": 133.863215535995,
+      "screening_pass": true
+    },
+    {
+      "seed": 33,
+      "steps": 128,
+      "sum_chain_ess_per_second": 115.58834885397796,
+      "equal_variance_pooled_mean_ess_per_second": 112.55941196309855,
+      "screening_pass": true
+    }
+  ],
+  "note": "Sensitivity diagnostic only: m^2/sum(1/ESS_i) assumes independent chains with a common stationary single-draw variance. Poorly mixed cases remain provisional; not a definitive corrected estimator."
+}

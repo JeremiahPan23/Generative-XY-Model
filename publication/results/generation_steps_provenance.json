@@ -1,0 +1,26 @@
+{
+  "11": {
+    "config_matches": true,
+    "evaluation_matches": true,
+    "reference_matches": true,
+    "checkpoint_metadata_matches": true,
+    "model_parameters_finite": true
+  },
+  "22": {
+    "config_matches": true,
+    "evaluation_matches": true,
+    "reference_matches": true,
+    "checkpoint_metadata_matches": true,
+    "model_parameters_finite": true,
+    "replication_provenance_matches": true
+  },
+  "33": {
+    "config_matches": true,
+    "evaluation_matches": true,
+    "reference_matches": true,
+    "checkpoint_metadata_matches": true,
+    "model_parameters_finite": true,
+    "replication_provenance_matches": true
+  },
+  "distinct_trained_parameters": true
+}

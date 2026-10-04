@@ -1,0 +1,227 @@
+{
+  "protocol_version": 1,
+  "start_update": 5000,
+  "target_updates": 10000,
+  "training_seeds": [
+    11,
+    22,
+    33
+  ],
+  "baselines": {
+    "11": {
+      "directory": "results/sps_a/L4_seed11_full_25906",
+      "evaluation_directory": "eval_long_25955",
+      "checkpoint_sha256": "40cc9811cc23f4785af7b44e0ae57990a56336257209135b19c0484a6afcda1f",
+      "summary_sha256": "27aaf57eced17755f221572c22f001988f7504389100ec8b7efaee756258f577"
+    },
+    "22": {
+      "directory": "results/sps_a/L4_seed22_replica_26634",
+      "evaluation_directory": "eval_long",
+      "checkpoint_sha256": "38cdf49bd921c019dfc52f910b77c8de02b87e5d0ec4288339fe078b2f02cd7e",
+      "summary_sha256": "58add499aa5317560283d516fe3494bf9cdeaf11256e70c7d7a123bcce4c6a17"
+    },
+    "33": {
+      "directory": "results/sps_a/L4_seed33_replica_26635",
+      "evaluation_directory": "eval_long",
+      "checkpoint_sha256": "68866f13782a3c94215d066a74534c83f49b4181be89505a0221be1d2eac034d",
+      "summary_sha256": "77d940067aec2fbd3b948b65a36a59988df0569b74b7b6c67f18f34b0c025981"
+    }
+  },
+  "baseline_config": {
+    "L": 4,
+    "beta": 1.12,
+    "J": 1.0,
+    "horizon": 1.0,
+    "train_steps": 32,
+    "hidden": 32,
+    "drift_bound": 12.0,
+    "sigma_min": 0.2,
+    "sigma_max": 2.0,
+    "updates": 5000,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "seed": 11,
+    "checkpoint_every": 250
+  },
+  "baseline_environment": {
+    "python": "3.10.21",
+    "torch": "2.14.0+cu130",
+    "numpy": "2.2.6",
+    "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "evaluation_settings": {
+    "steps": [
+      32,
+      64,
+      128
+    ],
+    "chains": 8,
+    "draws": 16384,
+    "burn": 4096,
+    "batch_size": 128,
+    "seed": 22000
+  },
+  "reference_metadata": {
+    "L": 4,
+    "beta": 1.12,
+    "J": 1.0,
+    "chains": 4,
+    "draws": 4096,
+    "burn": 2000,
+    "interval": 20,
+    "seed": 7000,
+    "seconds": 0.3936346583068371,
+    "sampler_sha256": "aa939108a5595a4a963974ecad03d1bd98589baecfec728bde8906db5501fe92",
+    "samples_sha256": "4c0c3b81565f53eb344783aa4454cba82d3e31cb3900d264c5fcfee6c5f1029d",
+    "summaries": {
+      "energy": {
+        "mean": -0.7498969554688149,
+        "sd": 0.09761703945456764,
+        "sem": 0.000775586379088862,
+        "ci95": [
+          -0.751417104771829,
+          -0.7483768061658007
+        ],
+        "ess": 15840.993106049415,
+        "ess_by_chain": [
+          3851.2088361041806,
+          3889.8882882324274,
+          4040.157599916275,
+          4059.7383817965333
+        ],
+        "split_rhat": 0.9999152514102385,
+        "chain_means": [
+          -0.7507270264714198,
+          -0.7503631193964946,
+          -0.747981924994634,
+          -0.750515751012711
+        ],
+        "first_half_mean": -0.7490465682604455,
+        "last_half_mean": -0.7507473426771842,
+        "screening_pass": true,
+        "note": "Approximate stationarity-dependent ESS/CI; screening is not a mixing proof."
+      },
+      "pairs": {
+        "mean": 0.03277587890625,
+        "sd": 0.1972464036382808,
+        "sem": 0.001566055068915415,
+        "ci95": [
+          0.029706410971175788,
+          0.03584534684132421
+        ],
+        "ess": 15886.347877266213,
+        "ess_by_chain": [
+          4089.382904307188,
+          3754.8516771492264,
+          4096.0,
+          3946.1132958097987
+        ],
+        "split_rhat": 0.9999768427544146,
+        "chain_means": [
+          0.03076171875,
+          0.03271484375,
+          0.033447265625,
+          0.0341796875
+        ],
+        "first_half_mean": 0.0333251953125,
+        "last_half_mean": 0.0322265625,
+        "screening_pass": true,
+        "note": "Approximate stationarity-dependent ESS/CI; screening is not a mixing proof."
+      },
+      "magnetization": {
+        "mean": 0.8459667328617579,
+        "sd": 0.07211708296628287,
+        "sem": 0.0006690144076559166,
+        "ci95": [
+          0.8446554646227523,
+          0.8472780011007636
+        ],
+        "ess": 15765.167745085724,
+        "ess_by_chain": [
+          3788.2596159989503,
+          3855.8268792190643,
+          4096.0,
+          4025.08124986771
+        ],
+        "split_rhat": 0.9999775136706273,
+        "chain_means": [
+          0.8468341462665532,
+          0.8466648219520523,
+          0.8439786123952719,
+          0.8463893508331546
+        ],
+        "first_half_mean": 0.8453313018784347,
+        "last_half_mean": 0.8466021638450812,
+        "screening_pass": true,
+        "note": "Approximate stationarity-dependent ESS/CI; screening is not a mixing proof."
+      },
+      "G_1": {
+        "mean": 0.7498969554688149,
+        "sd": 0.09761703945456764,
+        "sem": 0.000775586379088862,
+        "ci95": [
+          0.7483768061658007,
+          0.751417104771829
+        ],
+        "ess": 15840.993106049415,
+        "ess_by_chain": [
+          3851.2088361041806,
+          3889.8882882324274,
+          4040.157599916275,
+          4059.7383817965333
+        ],
+        "split_rhat": 0.9999152514102385,
+        "chain_means": [
+          0.7507270264714198,
+          0.7503631193964946,
+          0.747981924994634,
+          0.750515751012711
+        ],
+        "first_half_mean": 0.7490465682604455,
+        "last_half_mean": 0.7507473426771842,
+        "screening_pass": true,
+        "note": "Approximate stationarity-dependent ESS/CI; screening is not a mixing proof."
+      },
+      "G_2": {
+        "mean": 0.6967936192127835,
+        "sd": 0.13297416963511324,
+        "sem": 0.0012337706583043383,
+        "ci95": [
+          0.694375428722507,
+          0.69921180970306
+        ],
+        "ess": 15926.538546828167,
+        "ess_by_chain": [
+          3789.639147879936,
+          4002.7253652814993,
+          4096.0,
+          4038.174033666732
+        ],
+        "split_rhat": 0.9999893766151983,
+        "chain_means": [
+          0.6982456362938732,
+          0.6980001128266994,
+          0.6931012662746607,
+          0.6978274614559004
+        ],
+        "first_half_mean": 0.6955525987947806,
+        "last_half_mean": 0.6980346396307862,
+        "screening_pass": true,
+        "note": "Approximate stationarity-dependent ESS/CI; screening is not a mixing proof."
+      }
+    },
+    "purpose": "Independent validation only; NEVER used as SPS training data"
+  },
+  "source_sha256": {
+    "src/sps_xy.py": "89bf6b0f0480dbff25df79fb2617c670b834f90ed7d1ec4d7baf973abd56ea66",
+    "src/sps_diagnostics.py": "a001499fcdf49a1c5ca8dae35e4b780b7b09fa69b5af3358d39f872eed3176de",
+    "src/sampler_wolff.py": "aa939108a5595a4a963974ecad03d1bd98589baecfec728bde8906db5501fe92",
+    "src/xy_observables.py": "37969eef23eb05d25330ef47c0064f0e030a2e64fedc206da988e49e20ebd779",
+    "scripts/sps_experiment.py": "b37b34d9d5403e67df9b42e589962f7c770831744f6de8e6227f738caa5e0485",
+    "tests/test_sps_xy.py": "797b16e5e6fa59b7ad6fcf48975c079e962e0576c20b339fd52be4ea94e60242",
+    "configs/sps_a_l4.json": "64f1079d0fd81cc9915dc9eb36712c6901fac172693d04abd410cb69f3875d6f"
+  },
+  "note": "Paired continuation of all three existing models. Only total parameter-update budget changes; no new seed, no change to model, learning rate, batch size, path steps, physical target, validation reference or evaluation budget. One fixed doubling; no automatic further training."
+}
