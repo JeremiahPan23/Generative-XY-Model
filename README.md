@@ -2,34 +2,55 @@
 
 **Data-free generative sampling of the two-dimensional XY model.**
 
-An ongoing undergraduate physics research project investigating stochastic path sampling (SPS). The current study implements a data-free sampler on a **4 x 4 periodic lattice**, compares three training seeds and three training budgets, and explains a concrete Metropolis-Hastings (MH) sticking event. It has **not demonstrated a solution to BKT critical slowing down or a speedup over Wolff sampling**.
+An ongoing undergraduate physics research project implementing stochastic path sampling (SPS) on periodic angular variables. The study has progressed from a single-temperature baseline to shared-temperature **free / Nelson** training and a **12-temperature evaluation of frozen models**. Wolff configurations are used for validation, not as SPS training data.
 
-## Completed study
+**Updated 2026-10-29.** The latest measurements and saved-data analysis were completed by 2026-10-21; this update publishes selected existing results, not new training. All reported SPS experiments use a **4 x 4 lattice**. The earlier single-temperature study has three training seeds; the shared free/Nelson comparison currently has **one paired training seed, 11**. There is no demonstrated solution to BKT critical slowing down or speedup over Wolff.
 
-- **Data-free SPS:** training uses the XY Hamiltonian and probabilities of model-generated paths. Wolff configurations are used only for independent validation.
-- **Generation-step comparison:** increasing path steps from 32 to 64 to 128 increased acceptance in the tested settings, but also increased cost. Higher acceptance did not guarantee higher effective sample size (ESS) per second.
-- **Three paired training histories:** seeds 11, 22 and 33 were trained to 5,000 updates and continued to 10,000 and 15,000. Energy ESS/s initially improved for all nine settings; later changes depended on the seed. Unfavorable results are retained.
-- **A diagnosed failure mode:** a high relative path weight caused 12,406 consecutive rejected transitions in one retained chain segment. The sampler kept proposing configurations while MH kept the old state. The recorded segment ends before the state is replaced.
+## Current progress
 
-These results concern **one small lattice and one temperature**, `beta=1.12` (`T ≈ 0.893` for `J=k_B=1`). Screening checks and finite-chain ESS estimates do not prove full equilibration or control of rare sticking events. This training-budget study stopped at 15,000 updates.
+| Stage | Completed work | Evidence and limits |
+|---|---|---|
+| Baseline and diagnostics | Data-free angular SPS; three training seeds and 5,000 / 10,000 / 15,000-update comparisons | [Historical results](docs/public/results.md), including unfavorable outcomes and a recorded 12,406-rejection stay |
+| Longer generation paths | Fixed three existing central-temperature models, evaluated through `N=2000` without retraining | Acceptance **48.96%, 46.61%, 45.10%**; all remain below the project's 50% stage target |
+| Three temperatures, separate training | Three single-temperature models per temperature at `T=0.87, 1/1.12, 0.92` | Nine finite-run physical screens passed; these are not nine shared models or a three-seed Nelson replication |
+| Shared-temperature free / Nelson | One model per arm, seed 11, 15,000 updates; both use three prefix losses | Nelson's original three-temperature acceptance **55.03%–56.03%**, candidate-weight ESS/n **51.31%–52.53%** |
+| Frozen-model temperature scan | **4,096 paths per arm**, 12 finite temperatures from **8.7 to 0.87**, one common **1,035-step** full mesh | Nelson acceptance **55.87%–74.83%**, candidate-weight ESS/n **52.28%–83.35%**, higher than free at all 12 sampled temperatures in this evaluation |
+| Saved MH-chain physics | Energy, vortex density and radial susceptibility from **4 x 895 retained records per temperature**, including rejection repeats | Nelson is compatible with Wolff for these observables within the present finite uncertainty; free has finite-chain warnings |
+
+These stages have different models, meshes and budgets. Their differences cannot all be attributed to Nelson's relation. See [the current progress and evaluation protocol](docs/public/progress.md) for the comparisons, uncertainties, costs and remaining questions.
+
+## Latest figures
+
+### Complete sampler: MH-corrected physics versus Wolff
+
+![Nelson MH-corrected energy, vortex density and radial susceptibility versus Wolff](publication/figures/mh_observables.png)
+
+The green curves are the **Nelson + path-space MH** output; black curves are same-size Wolff references. Error bars are pointwise 95% block-bootstrap intervals. The displayed susceptibility is explicitly the magnetization-modulus fluctuation, `chi_radial = beta/V * (mean(|M|^2) - mean(|M|)^2)`, with `V=16`. Agreement of selected observables is finite evidence, not a proof of full equilibration or BKT scaling.
+
+### Acceptance and candidate-path importance weights
+
+![Free versus Nelson acceptance and candidate-path importance ESS/n at 12 temperatures](publication/figures/multitemperature_efficiency.png)
+
+Both arms share the original three-temperature training task. The importance denominator is **4,096 candidate paths**; the acceptance denominator is **3,580 retained attempted transitions**. Neither is the observable-specific MCMC ESS. The 50% line is a project stage target, not a validity theorem. Higher acceptance or importance ESS/n does not by itself establish better effective sampling per second.
+
+[Raw / MH / Wolff comparison](publication/figures/raw_mh_observables.png) and [low-temperature detail](publication/figures/mh_low_temperature.png) are retained as diagnostics. Raw proposals still show physical bias; that is a generator diagnostic rather than evidence that the complete SPS/MH sampler is invalid. **All 12 temperatures share path prefixes, not 12 independent training replications.**
 
 ## Read the study
 
 | Resource | Contents |
 |---|---|
-| [Method](docs/public/method.md) | XY target, angular paths, data-free training, path-space MH and diagnostics |
-| [Results and limitations](docs/public/results.md) | Figures, controlled comparisons, costs and interpretation boundaries |
-| [Published artifacts](publication/README.md) | Complete summaries for all 27 settings, selected figures and file hashes |
-| [Historical Wolff / flow-matching baseline](docs/public/legacy.md) | Seven-temperature visualizations and the earlier supervised DiT experiment |
-| [References](literature/README.md) | Foundational papers and BibTeX entries |
+| [Current progress](docs/public/progress.md) | Longer-path, separate-temperature, shared-Nelson and 12-temperature results; present scope |
+| [Method](docs/public/method.md) | XY target, angular kernels, prefix training, Nelson convention and path-space MH |
+| [Historical baseline](docs/public/results.md) | Training-budget comparisons, effective information rates and a long-stay diagnosis |
+| [Published artifacts](publication/README.md) | Selected figures, complete compact tables, projected diagnostic summaries and hashes |
+| [Historical Wolff / flow matching](docs/public/legacy.md) | Seven-temperature Wolff visualizations and the earlier supervised DiT pipeline |
+| [References](literature/README.md) | Foundational papers, attribution and BibTeX |
 
-![Three paired training budgets](publication/figures/training_budget.png)
-
-The figure displays `N=32` settings. The [CSV](publication/results/training_budget.csv) and [JSON](publication/results/training_budget.json) include all three generation-step counts and all seeds, including failed screening and unfavorable changes. Energy is reported **per bond**, `H/(2L^2)`.
+The current research phase is consolidation of these results and definition of the next replication and mechanism checks. Additional paired training seeds, larger lattices and a matched Wolff cost comparison remain future work, not completed results.
 
 ## Install and verify
 
-Use a Python environment with a compatible PyTorch installation. Run commands from the project root:
+Use a Python environment with a compatible PyTorch installation. From the project root:
 
 ```bash
 python -m pip install -r requirements-sps.txt
@@ -38,13 +59,13 @@ python scripts/verify_sps_a.py
 python scripts/build_publication.py --check
 ```
 
-The tests use temporary fixtures and require no historical datasets or checkpoints. Some perform tiny **CPU** updates to check resume behavior. They are software checks, not substitutes for physical validation. The original experiments used a CUDA GPU; dependency lists specify minimum versions, not an exact environment lock. For notebook tools, additionally install `requirements.txt`.
+The published tests use synthetic fixtures and tiny CPU operations, without historical checkpoints or production sampling. They check software behavior, not scientific validity. Original production runs used a CUDA GPU; dependency lists specify minimum versions, not an exact environment lock. Notebook tools additionally require `requirements.txt`.
 
-`verify_sps_a.py` checks seven core files against the original experiment bundle. Historical source/configuration files retain their original bytes, including line endings, because exact-run tools check SHA-256 hashes.
+`verify_sps_a.py` checks seven original core files against their pinned hashes. The publication checker verifies published artifacts and an explicit implementation-file list, without requiring private data. Source/configuration bytes and line endings remain preserved where historical tools pin SHA-256.
 
-## Run a new experiment
+## Run a new baseline experiment
 
-The portable entry point is `scripts/sps_experiment.py`. For example, on a machine with a configured CUDA environment:
+The portable CLI below is the **single-temperature baseline workflow**. It does not reproduce the shared-model temperature scan or recover the omitted historical models:
 
 ```bash
 python scripts/sps_experiment.py train --config configs/sps_a_l4.json --out results/new_L4_seed11/train --device cuda --seed 11
@@ -52,9 +73,7 @@ python scripts/sps_experiment.py reference --L 4 --out results/new_L4_seed11/ref
 python scripts/sps_experiment.py evaluate --checkpoint results/new_L4_seed11/train/checkpoint.pt --reference results/new_L4_seed11/reference --out results/new_L4_seed11/eval --device cuda --steps 32 64 128 --chains 8 --draws 16384 --burn 4096 --batch-size 128 --seed 22000
 ```
 
-Training does not read the reference. Wolff sampling is a separate validation step. Use fresh output directories; the CLI refuses to overwrite completed outputs unless training is explicitly resumed. These commands reproduce the **workflow**, not the exact omitted historical run or its timing.
-
-For Slurm, activate your compute-node environment and submit the generic template from the project root:
+Training does not read the reference. Use fresh output directories; the CLI refuses to overwrite completed outputs unless training is explicitly resumed. To use Slurm, adjust the generic `scripts/slurm/sps_a.slurm` resources and ensure the project and environment are available on the allocated node:
 
 ```bash
 export SPS_PYTHON="$(command -v python)"
@@ -63,31 +82,30 @@ MODE=pilot L=4 SEED=11 sbatch scripts/slurm/sps_a.slurm
 MODE=full L=4 SEED=11 sbatch scripts/slurm/sps_a.slurm
 ```
 
-The template requests `gpu:1` in a `gpu` partition. Adjust resources for your cluster. Code and the environment must be visible on the allocated node; transfer them first on clusters without a shared filesystem. The template's default evaluation is shorter than the published study. To match the long-chain settings, use the explicit `evaluate` command above.
+The template's default evaluation is shorter than the long-chain baseline study. The shared-model implementation is provided separately in [sps_nelson.py](src/sps_nelson.py), with [raw-prefix collection](src/sps_intermediate.py), [path scoring and MH](src/sps_intermediate_efficiency.py), and synthetic tests. Historical cluster-specific launchers and pinned data archives are not part of this portable CLI example.
 
 ## Contents and reproducibility
 
 | Directory | Role |
 |---|---|
-| `src/` | Current angular SPS, Wolff and observables; historical DiT/FM code |
-| `scripts/` | Portable experiment CLI, diagnostics, publication packaging and historical exact-run tools |
-| `configs/` | Training settings and pinned protocols; `L=8` is an unreported option |
-| `tests/` | Physics calculations, MH behavior and provenance/resume checks |
-| `notebooks/` | Three historical Wolff/FM notebooks with cleared outputs |
-| `docs/public/` | Selected research explanations |
-| `publication/` | Lightweight results and figures copied from the local archive |
-| `literature/` | Citation entries and source links |
+| `src/` | Angular SPS, shared-temperature Nelson/free model, prefix scoring, Wolff and observables; historical DiT/FM code |
+| `scripts/` | Portable baseline CLI, diagnostics, selected-publication export and historical exact-run tools |
+| `configs/` | Published baseline settings; the `L=8` option is not a reported result |
+| `tests/` | Synthetic physics/probability, MH, resume, prefix and export-integrity checks |
+| `docs/public/` | Public method, progress, baseline and historical explanations |
+| `publication/` | Lightweight figures and result exports from existing analyses |
+| `literature/` | Citations and source links |
 
-**Included:** source, configurations, tests, complete selected summary tables, numerical result JSON, and selected figures made by this project. [The publication manifest](publication/manifest.json) records source filenames and hashes; copies are not new measurements.
+**Included:** selected source and tests, compact numerical summaries, original project figures and a [publication manifest](publication/manifest.json). Figure and unchanged-table copies retain their original bytes; tables with local-path columns removed and JSON field projections are explicitly recorded as **derived public exports**, with source and output fingerprints. Exporting does not recompute physical measurements.
 
-**Kept outside Git:** raw datasets, checkpoints, NPZ proposal/chain archives, downloaded bundles, full logs, temporary files, third-party paper PDFs, and personal meeting/learning notes. They remain in the local research archive; GitHub is not its backup.
+**Kept local:** checkpoints, raw datasets, NPZ proposal/chain banks, downloaded bundles, full logs, personal meeting/learning notes, supervisor chat screenshots and machine-specific execution records. GitHub is not the full research archive.
 
-Historical comparison, continuation and sticking-analysis scripts need the omitted binary archive in its recorded directory layout. A clean clone supports inspecting results, checking published integrity, running tests and generating a **new** experiment. It cannot resume old models, independently replay their full MH chains or redraw every historical plot without those files. Intermediate SPS paths were not retained even in the original endpoint/weight archives.
+A clean clone supports reading the selected evidence, integrity checks, synthetic tests and new baseline experiments. Historical models and raw records are needed to resume or independently audit the original runs. Complete intermediate trajectories were not retained in the published endpoint/weight archives; saved-state replay must not be described as reconstructing every transition density from saved full paths.
 
-The historical DiT's `VorticityExtractor` remains because the old model and checkpoint depend on it. Current SPS uses periodic CNNs without this module. There is no controlled DiT-versus-CNN result. The original cluster-specific submission wrapper is historical tooling, not the generic quickstart.
+The historical DiT's `VorticityExtractor` remains for compatibility. Current SPS uses periodic CNNs without it; no controlled experiment establishes that attention or flow matching itself is unsuitable.
 
 ## Attribution
 
-This sampler adapts the SPS framework of Chen et al. to periodic XY angles. Wolff provides reference validation. The project preserves an earlier supervised flow-matching investigation; it does not claim to originate SPS, Wolff, DiT or flow matching. See the [references](literature/README.md) and [method attribution](docs/public/method.md).
+This project adapts the SPS framework of Chen et al. to periodic XY angles and studies a Nelson-tied backward drift. Wolff provides reference validation. It does not claim to originate SPS, Nelson's relation, Wolff, DiT or flow matching. See [method attribution](docs/public/method.md) and [references](literature/README.md).
 
-AI coding assistants supported implementation and explanatory materials. Published statements distinguish measurements, interpretations and untested claims. This repository is a research snapshot, not a claim of a published paper.
+AI coding assistants supported implementation and explanatory materials. Measurements, finite-run observations and proposed work are identified separately. This repository is an ongoing research snapshot, not a claim of a published paper or established novelty.

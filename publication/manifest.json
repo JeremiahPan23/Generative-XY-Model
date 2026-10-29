@@ -1,100 +1,471 @@
 {
-  "format_version": 1,
+  "format_version": 2,
   "artifacts": {
     "results/training_budget.csv": {
       "source": "results/sps_a_training_budget_three_points/comparison.csv",
+      "source_sha256": "b0cd0adf6b830481ec290ae22a37419ff3ad4e219fe051e63fd4b1b86bff8104",
+      "source_bytes": 6113,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "b0cd0adf6b830481ec290ae22a37419ff3ad4e219fe051e63fd4b1b86bff8104",
       "bytes": 6113
     },
     "results/training_budget.json": {
       "source": "results/sps_a_training_budget_three_points/comparison.json",
+      "source_sha256": "b530782ec6ef8e04df7a6ab51c1048cced585197f9097d724ddef7e7351cb577",
+      "source_bytes": 208605,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "b530782ec6ef8e04df7a6ab51c1048cced585197f9097d724ddef7e7351cb577",
       "bytes": 208605
     },
     "results/generation_steps.csv": {
       "source": "results/sps_a_seed_replication/comparison.csv",
+      "source_sha256": "9b7b173e797fd39508da19f9cc28059b05d4aee830c324d147437d939609b691",
+      "source_bytes": 2658,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "9b7b173e797fd39508da19f9cc28059b05d4aee830c324d147437d939609b691",
       "bytes": 2658
     },
     "results/generation_steps.json": {
       "source": "results/sps_a_seed_replication/comparison.json",
+      "source_sha256": "6d2f18acb93a3e3c64d9c3a496d0a93fb38012fa4a79de1a57aab28636c08cb9",
+      "source_bytes": 7253,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "6d2f18acb93a3e3c64d9c3a496d0a93fb38012fa4a79de1a57aab28636c08cb9",
       "bytes": 7253
     },
     "results/sticking_mechanism.json": {
       "source": "results/sps_sticking_mechanism/mechanism.json",
+      "source_sha256": "35095c296f6f36e1abde1df4d6f49414607e00707c7b92c32b2e00b76f22eb33",
+      "source_bytes": 5511,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "35095c296f6f36e1abde1df4d6f49414607e00707c7b92c32b2e00b76f22eb33",
       "bytes": 5511
     },
     "results/training_budget_import_manifest.json": {
       "source": "results/sps_a_training_budget_three_points/import_manifest.json",
+      "source_sha256": "d32f44c2e9320e70f9d9f12eb04984355acef78c7bd39e388a904f69c7d0b6e3",
+      "source_bytes": 17805,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "d32f44c2e9320e70f9d9f12eb04984355acef78c7bd39e388a904f69c7d0b6e3",
       "bytes": 17805
     },
     "results/generation_steps_provenance.json": {
       "source": "results/sps_a_seed_replication/provenance_checks.json",
+      "source_sha256": "1e16553a68bcd1a310d98019289bab58946bbf036caa74fa3f0bc4fc69e317f4",
+      "source_bytes": 703,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "1e16553a68bcd1a310d98019289bab58946bbf036caa74fa3f0bc4fc69e317f4",
       "bytes": 703
     },
     "results/ess_sensitivity.json": {
       "source": "results/sps_a_seed_replication/ess_sensitivity.json",
+      "source_sha256": "406c587f4793902ad564d5ee19692b81ffa9d5578b3729479b17b80cf3c64ba5",
+      "source_bytes": 2127,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "406c587f4793902ad564d5ee19692b81ffa9d5578b3729479b17b80cf3c64ba5",
       "bytes": 2127
     },
     "results/legacy_fm_wolff.json": {
       "source": "results/fm_wolff_baseline/summary.json",
+      "source_sha256": "8a79eec872bc4270edae09b173e986437499093fb2ec92b3450e96d86c75db6e",
+      "source_bytes": 5574,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "8a79eec872bc4270edae09b173e986437499093fb2ec92b3450e96d86c75db6e",
       "bytes": 5574
     },
     "results/legacy_fm_wolff_manifest.json": {
       "source": "results/fm_wolff_baseline/manifest.json",
+      "source_sha256": "ad8d3400c2f4edc32188489b0f1d3c212a47e409b62e89c4a1e9905dd1716d88",
+      "source_bytes": 2785,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "ad8d3400c2f4edc32188489b0f1d3c212a47e409b62e89c4a1e9905dd1716d88",
       "bytes": 2785
     },
     "figures/training_budget.png": {
       "source": "results/sps_a_training_budget_three_points/three_budget_comparison.png",
+      "source_sha256": "45a065049cddf08dbb7be7b948dbd5f6f08116607e1834fab7c22af7389f8838",
+      "source_bytes": 296481,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "45a065049cddf08dbb7be7b948dbd5f6f08116607e1834fab7c22af7389f8838",
       "bytes": 296481
     },
     "figures/training_budget.pdf": {
       "source": "results/sps_a_training_budget_three_points/three_budget_comparison.pdf",
+      "source_sha256": "108771aa5529c3caf3e69a0355106254247e30455539d1e6441a4767c1da3931",
+      "source_bytes": 28416,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "108771aa5529c3caf3e69a0355106254247e30455539d1e6441a4767c1da3931",
       "bytes": 28416
     },
     "figures/generation_steps.png": {
       "source": "results/sps_a_seed_replication/three_seed_comparison.png",
+      "source_sha256": "5e5f4d31aad03c6c529237ba6b1a3763d715a17cd3c731b4a2b4859e9d9b2142",
+      "source_bytes": 258362,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "5e5f4d31aad03c6c529237ba6b1a3763d715a17cd3c731b4a2b4859e9d9b2142",
       "bytes": 258362
     },
     "figures/sticking_mechanism.png": {
       "source": "results/sps_sticking_mechanism/mechanism_explained.png",
+      "source_sha256": "b4463dc7bb80ca4034bf51b066261c22032a77c3e1c233a6b40f407e975801c1",
+      "source_bytes": 318213,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "b4463dc7bb80ca4034bf51b066261c22032a77c3e1c233a6b40f407e975801c1",
       "bytes": 318213
     },
     "figures/sticking_mechanism.pdf": {
       "source": "results/sps_sticking_mechanism/mechanism_explained.pdf",
+      "source_sha256": "15d586b8501ec2f8f1aeaabadec28da2f564e15b1256526c682d3b702cba4985",
+      "source_bytes": 116404,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "15d586b8501ec2f8f1aeaabadec28da2f564e15b1256526c682d3b702cba4985",
       "bytes": 116404
     },
     "figures/legacy_fm_wolff.png": {
       "source": "results/fm_wolff_baseline/comparison.png",
+      "source_sha256": "626709efceabb87527798c21089258f3753131680aa9e5552453c553e215fb58",
+      "source_bytes": 309936,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "626709efceabb87527798c21089258f3753131680aa9e5552453c553e215fb58",
       "bytes": 309936
     },
     "figures/legacy_fm_wolff.pdf": {
       "source": "results/fm_wolff_baseline/comparison.pdf",
+      "source_sha256": "867cc70b940d0b58e306c6d521d63decbd39a5dff05ac1ad09803a146f8c5477",
+      "source_bytes": 28215,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "867cc70b940d0b58e306c6d521d63decbd39a5dff05ac1ad09803a146f8c5477",
       "bytes": 28215
     },
     "figures/reference_multitemperature.png": {
       "source": "figures/multitemp_example_grid.png",
+      "source_sha256": "e861756bc93e1cf26301fba4dd22e358cb92abb7bdcd6e4319d6771a5dd2aec1",
+      "source_bytes": 683623,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "e861756bc93e1cf26301fba4dd22e358cb92abb7bdcd6e4319d6771a5dd2aec1",
       "bytes": 683623
     },
     "figures/reference_statistics.png": {
       "source": "figures/multitemp_vortex_energy.png",
+      "source_sha256": "142ece8a90ac9dba05ebf0b24c8ce83ec50f7a37708fc9b67884538798712344",
+      "source_bytes": 216608,
+      "transformation": {
+        "kind": "copy"
+      },
       "sha256": "142ece8a90ac9dba05ebf0b24c8ce83ec50f7a37708fc9b67884538798712344",
       "bytes": 216608
+    },
+    "results/path_steps_2000.csv": {
+      "source": "results/sps_path_steps_2000/combined_formal/comparison.csv",
+      "source_sha256": "80daf9b897e23fd2a81f4c10d2953dfd8f0065fe49dee321a322ee04eca22757",
+      "source_bytes": 18439,
+      "transformation": {
+        "kind": "csv_projection",
+        "columns": [
+          "seed",
+          "training_updates",
+          "L",
+          "beta",
+          "generation_steps",
+          "h",
+          "candidate_path_count",
+          "retained_mh_count",
+          "acceptance",
+          "proposal_importance_ess",
+          "proposal_importance_ess_fraction",
+          "physical_screening_pass",
+          "failed_physical_observables",
+          "energy_per_bond",
+          "energy_sem",
+          "vortex_pairs",
+          "vortex_pairs_sem",
+          "auxiliary_mh_energy_ess",
+          "auxiliary_mh_pairs_ess",
+          "sampling_seconds",
+          "summary_sha256",
+          "samples_sha256",
+          "checkpoint_sha256",
+          "auxiliary_mh_G_1_ess",
+          "auxiliary_mh_G_1_ess_fraction",
+          "auxiliary_mh_G_2_ess",
+          "auxiliary_mh_G_2_ess_fraction",
+          "auxiliary_mh_energy_ess_fraction",
+          "auxiliary_mh_magnetization_ess",
+          "auxiliary_mh_magnetization_ess_fraction",
+          "auxiliary_mh_pairs_ess_fraction",
+          "proposal_importance_ess_denominator",
+          "auxiliary_mh_ess_denominator"
+        ],
+        "dropped_csv_columns": [
+          "summary_path"
+        ]
+      },
+      "sha256": "91ddb2c37392289124e33f99c6de5990713c15376be5ec40f2a97aa91e5caaec",
+      "bytes": 15656
+    },
+    "figures/path_steps_2000.png": {
+      "source": "results/sps_path_steps_2000/combined_formal/path_steps_comparison.png",
+      "source_sha256": "7172186c107e8aa136c61d95c0a7d230ce7348f4495735d048b606383e268324",
+      "source_bytes": 209274,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "7172186c107e8aa136c61d95c0a7d230ce7348f4495735d048b606383e268324",
+      "bytes": 209274
+    },
+    "results/three_temperatures.csv": {
+      "source": "results/sps_temperatures/combined_formal/comparison.csv",
+      "source_sha256": "fa00c0c63969f26b2546fb5b8dcb4e3ae1eeb2ed798a5e13ee4c1c7a965e063c",
+      "source_bytes": 7846,
+      "transformation": {
+        "kind": "csv_projection",
+        "columns": [
+          "temperature_tag",
+          "T",
+          "beta",
+          "L",
+          "J",
+          "training_seed",
+          "training_updates",
+          "generation_steps",
+          "candidate_path_count",
+          "retained_mh_count",
+          "acceptance",
+          "proposal_importance_ess",
+          "proposal_importance_ess_fraction",
+          "auxiliary_importance_ess_per_generation_step",
+          "energy_per_bond",
+          "energy_sem",
+          "vortex_pairs",
+          "vortex_pairs_sem",
+          "auxiliary_mh_energy_ess",
+          "auxiliary_mh_pairs_ess",
+          "auxiliary_mh_energy_ess_fraction",
+          "auxiliary_mh_pairs_ess_fraction",
+          "sampling_seconds",
+          "training_seconds",
+          "physical_screening_pass",
+          "failed_physical_observables",
+          "summary_sha256",
+          "samples_sha256",
+          "checkpoint_sha256",
+          "reference_json_sha256",
+          "reference_samples_sha256"
+        ],
+        "dropped_csv_columns": [
+          "summary_path"
+        ]
+      },
+      "sha256": "bfaf29a62c97e93a4c261f6dddb12b51651d9267458b37377f21faa5e86fc421",
+      "bytes": 6629
+    },
+    "figures/three_temperatures.png": {
+      "source": "results/sps_temperatures/combined_formal/temperatures_physics.png",
+      "source_sha256": "a125f6190181aa9cfa87fe220e192e2a0714090841fe4400f13daf83102a8741",
+      "source_bytes": 219819,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "a125f6190181aa9cfa87fe220e192e2a0714090841fe4400f13daf83102a8741",
+      "bytes": 219819
+    },
+    "results/shared_nelson.csv": {
+      "source": "results/sps_nelson/combined_full_28346_28347/comparison.csv",
+      "source_sha256": "3364d060cce4f10a4aae813f294a0736d79f21988d9326f7e6ccf89de3f7fa97",
+      "source_bytes": 2472,
+      "transformation": {
+        "kind": "csv_projection",
+        "columns": [
+          "arm",
+          "training_seed",
+          "training_updates",
+          "temperature_tag",
+          "T",
+          "beta",
+          "t_stop",
+          "generation_steps",
+          "actual_dt",
+          "candidate_count",
+          "retained_count",
+          "acceptance",
+          "importance_ess",
+          "importance_ess_fraction",
+          "energy",
+          "energy_sem",
+          "pairs",
+          "pairs_sem",
+          "auxiliary_energy_chain_ess_fraction",
+          "auxiliary_pairs_chain_ess_fraction",
+          "sampling_seconds",
+          "physical_screening_pass",
+          "samples_sha256"
+        ],
+        "dropped_csv_columns": []
+      },
+      "sha256": "7e5aea7a25c28ee1c1c967239b43cb6fdb614c59d842ea61f4fbe6ec2fbd3620",
+      "bytes": 2465
+    },
+    "results/shared_nelson.json": {
+      "source": "results/sps_nelson/combined_full_28346_28347/comparison.json",
+      "source_sha256": "7e12c4a842d6a15e0e5d92eae66186d3b78e3a7592790f3b4f2839c01b766a79",
+      "source_bytes": 20795,
+      "transformation": {
+        "kind": "json_projection",
+        "schema": "shared_nelson_json_v1"
+      },
+      "sha256": "e69d8faf005f342fced0ffce11552d41913fbb91e6836a58402e1c022c0994b8",
+      "bytes": 18333
+    },
+    "figures/shared_nelson_efficiency.png": {
+      "source": "results/sps_nelson/combined_full_28346_28347/comparison.png",
+      "source_sha256": "e96a36a99f0870b700f87b7774b4060e7c8b7f32be772a6cd8e04af51aef6d99",
+      "source_bytes": 144129,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "e96a36a99f0870b700f87b7774b4060e7c8b7f32be772a6cd8e04af51aef6d99",
+      "bytes": 144129
+    },
+    "figures/shared_nelson_physics.png": {
+      "source": "results/sps_nelson/combined_full_28346_28347/physics.png",
+      "source_sha256": "805129ff1c2b2f76ee060c837309b6de2506e085a6daeb58280394e8a5622b0a",
+      "source_bytes": 184160,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "805129ff1c2b2f76ee060c837309b6de2506e085a6daeb58280394e8a5622b0a",
+      "bytes": 184160
+    },
+    "results/multitemperature_efficiency.csv": {
+      "source": "results/sps_intermediate/efficiency_28965/comparison/curves.csv",
+      "source_sha256": "ef76eeb013134ddf4ee3941152a50a6b28dac8df3b26b655c6ee6e2c2bf3fabd",
+      "source_bytes": 1528,
+      "transformation": {
+        "kind": "csv_projection",
+        "columns": [
+          "arm",
+          "temperature",
+          "time",
+          "accepted_fraction",
+          "importance_ess_fraction"
+        ],
+        "dropped_csv_columns": []
+      },
+      "sha256": "e7dbe6b0d5d5084b843e40c2931e7cf0687a647d28389aaf598f7bd660a69992",
+      "bytes": 1503
+    },
+    "figures/multitemperature_efficiency.png": {
+      "source": "results/sps_intermediate/efficiency_28965/comparison/acceptance_ess.png",
+      "source_sha256": "3866744ef7d524d27c3a62f7a0a8c3e50af40b2a7605fd338f7b4e4519e338b4",
+      "source_bytes": 222606,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "3866744ef7d524d27c3a62f7a0a8c3e50af40b2a7605fd338f7b4e4519e338b4",
+      "bytes": 222606
+    },
+    "results/mh_observables.csv": {
+      "source": "results/sps_intermediate/mh_observables_20261021/curves.csv",
+      "source_sha256": "bab87c1a0e8bdca97d1425e21c0415c411bcc89bd48a22f9f415c4840646abfc",
+      "source_bytes": 15181,
+      "transformation": {
+        "kind": "csv_projection",
+        "columns": [
+          "arm",
+          "index",
+          "temperature",
+          "observable",
+          "mh",
+          "mh_low95",
+          "mh_high95",
+          "mh_bootstrap_sem",
+          "raw",
+          "wolff",
+          "difference",
+          "standardized_difference",
+          "retained_records"
+        ],
+        "dropped_csv_columns": []
+      },
+      "sha256": "c698f047ba78aeb73dee4458486386bef321f2b6f042b5befd3344ba1b1e2db2",
+      "bytes": 15102
+    },
+    "results/mh_observables.json": {
+      "source": "results/sps_intermediate/mh_observables_20261021/summary.json",
+      "source_sha256": "c94ca41e02c2d2befd08a33db666fec3463f2622cd25c358c268bb0f80784e7d",
+      "source_bytes": 1206062,
+      "transformation": {
+        "kind": "json_projection",
+        "schema": "mh_observables_json_v1"
+      },
+      "sha256": "cf9d8dad098c0df9e2aa2f4d84b9c1a3f6dda1de8f301fd5d04eb6aaec2c57e4",
+      "bytes": 777958
+    },
+    "figures/mh_observables.png": {
+      "source": "results/sps_intermediate/mh_observables_20261021/physics_mh_main.png",
+      "source_sha256": "cf6dd3ce5b35e9bd66e97598da615a9d61c032addfe8d91ca6a875b2edf95873",
+      "source_bytes": 186787,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "cf6dd3ce5b35e9bd66e97598da615a9d61c032addfe8d91ca6a875b2edf95873",
+      "bytes": 186787
+    },
+    "figures/raw_mh_observables.png": {
+      "source": "results/sps_intermediate/mh_observables_20261021/physics_raw_mh_backup.png",
+      "source_sha256": "2f4399f234accfd66676b462cdfada602828e54b1a52cf1c9a5e3c70cc8d6cd1",
+      "source_bytes": 214804,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "2f4399f234accfd66676b462cdfada602828e54b1a52cf1c9a5e3c70cc8d6cd1",
+      "bytes": 214804
+    },
+    "figures/mh_low_temperature.png": {
+      "source": "results/sps_intermediate/mh_observables_20261021/physics_mh_low_temperature.png",
+      "source_sha256": "d532103f7d70776d370647dcfd7f02ae4155296ce54482da56c14de4ce74acc3",
+      "source_bytes": 211793,
+      "transformation": {
+        "kind": "copy"
+      },
+      "sha256": "d532103f7d70776d370647dcfd7f02ae4155296ce54482da56c14de4ce74acc3",
+      "bytes": 211793
     }
   },
   "implementation_files": {
@@ -233,7 +604,35 @@
     "configs/sps_a_replication.json": {
       "sha256": "12f09be7820e7e461f309ad98498179823510b6df8fcb9d76631ff3b5fe394e7",
       "bytes": 6566
+    },
+    "src/sps_nelson.py": {
+      "sha256": "eccb0424876bad03a4a46cf9be67d6267a887b5097d8a22e19d30a38dea53c0d",
+      "bytes": 8855
+    },
+    "src/sps_intermediate.py": {
+      "sha256": "accb233e47cc163fa5a90579b5e55a2f5f503bf0105334cac3d56b5e2466da72",
+      "bytes": 16761
+    },
+    "src/sps_intermediate_efficiency.py": {
+      "sha256": "6b4f748f53ef7080940033495949fe29108429418beeb3c1c89c57e0a27ee83b",
+      "bytes": 14721
+    },
+    "tests/test_sps_nelson.py": {
+      "sha256": "53504d858e93bc0022100745a596fd720ab687f3f3028578356526ca456bbbca",
+      "bytes": 12188
+    },
+    "tests/test_sps_intermediate_public.py": {
+      "sha256": "924d13b14641721e75c05b0c16c8642a87eba6117a2b145a28b04071431b08f4",
+      "bytes": 9880
+    },
+    "tests/test_sps_intermediate_efficiency.py": {
+      "sha256": "190f30828b1f3251cc56ae458ed4f2206a24d80c3cb13d26bbabd7b6bce4cbfc",
+      "bytes": 17925
+    },
+    "tests/test_publication.py": {
+      "sha256": "7b3c91c909ed6617febd46702a63a91b2ebc2ddb3067a51536ebfdf0480d11b8",
+      "bytes": 11627
     }
   },
-  "note": "Byte-identical copies of existing saved analyses, not new measurements. Source paths identify the omitted local archive. Integrity checks do not reproduce raw-data audits or full unrecorded paths."
+  "note": "Historical artifacts and new figures are byte copies. New tabular/JSON summaries are explicit field projections, not new measurements. Source and output hashes are distinct. --check verifies public integrity; --check-sources additionally verifies the omitted source archive and deterministic exports. Neither re-audits all original trajectories."
 }

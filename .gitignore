@@ -225,10 +225,13 @@ __marimo__/
 /logs/
 /archive/
 /tmp/
+/output/
 
 # Meeting rehearsal, course planning and private learning notes remain local.
 /docs/*
 !/docs/public/
+/AGENTS.md
+/PROJECT_MAP.md
 
 # Cite third-party papers without redistributing PDFs or extracted figures.
 /literature/*
@@ -245,6 +248,7 @@ __marimo__/
 slurm-*.out
 slurm-*.err
 *_jobids.txt
+*_jobids.tsv
 continuation_jobids.txt
 
 # Local credentials and editor/environment state.

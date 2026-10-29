@@ -1,6 +1,8 @@
-# Small-system results and limitations
+# Historical baseline: small-system results and limitations
 
-The completed study tests data-free XY SPS on a `4 x 4` periodic lattice at `beta=1.12`. It examines generation-step count, training budget, and a concrete MH sticking event. The evidence supports a working small-system implementation with informative diagnostics; it does not demonstrate a solution to BKT critical slowing down or a speedup over Wolff.
+This page preserves the earlier single-temperature baseline. For the later 2,000-step, separately trained three-temperature, shared free/Nelson and 12-temperature MH results, see [current progress](progress.md), updated 2026-10-29. Unfavorable baseline results remain here rather than being replaced by the newer figures.
+
+The baseline study tests data-free XY SPS on a `4 x 4` periodic lattice at `beta=1.12`. It examines generation-step count, training budget, and a concrete MH sticking event. The evidence supports a working small-system implementation with informative diagnostics; it does not demonstrate a solution to BKT critical slowing down or a speedup over Wolff.
 
 ## Experimental design
 
@@ -68,7 +70,7 @@ The recorded weights, random thresholds, repeated endpoints, and independent bon
 
 The project has moved from supervised Wolff-data flow matching to a data-free SPS implementation, completed three-seed and training-budget comparisons, and connected a recorded failure mode to its acceptance rule. The useful lesson is to evaluate physical statistics, weight tails, chain dependence, effective information rate, and cost together.
 
-The experiments cover one small lattice and one temperature. They do not provide system-size scaling, full-distribution convergence, a matched Wolff efficiency comparison, or evidence that BKT critical slowing down has been solved. Old DiT/flow-matching experiments changed several parts of the pipeline simultaneously, so they do not establish that attention or Euclidean flow matching is intrinsically unsuitable.
+The baseline experiments on this page cover one small lattice and one temperature; later temperature extensions are reported separately in [current progress](progress.md). Neither study provides system-size scaling, full-distribution convergence, a matched Wolff efficiency comparison, or evidence that BKT critical slowing down has been solved. Old DiT/flow-matching experiments changed several parts of the pipeline simultaneously, so they do not establish that attention or Euclidean flow matching is intrinsically unsuitable.
 
 This public repository contains selected figures and compact result summaries. Original checkpoint and sample archives remain outside GitHub; existing analysis scripts that audit those runs require those originals. Complete intermediate paths were not saved. Running the supplied code can create a new experiment, but obtaining the same historical curves from the public summaries is different from independently rerunning training and validating every original path density.
 
